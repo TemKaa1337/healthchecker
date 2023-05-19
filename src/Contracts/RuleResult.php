@@ -2,7 +2,7 @@
 
 namespace App\Contracts;
 
-interface RuleResult
+interface RuleResult extends \JsonSerializable
 {
     /**
      * @return bool

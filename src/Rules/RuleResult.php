@@ -6,6 +6,12 @@ use App\Contracts\RuleResult as RuleResultInterface;
 
 final readonly class RuleResult implements RuleResultInterface
 {
+    /**
+     * @param bool $isOk
+     * @param string $name
+     * @param string|null $description
+     * @param string|null $errorMessage
+     */
     public function __construct(
         private bool $isOk,
         private string $name,
@@ -44,5 +50,18 @@ final readonly class RuleResult implements RuleResultInterface
     public function getErrorMessage(): null|string
     {
         return $this->errorMessage;
+    }
+
+    /**
+     * @return array{success: bool, name: string, description: string|null, error: string|null}
+     */
+    public function jsonSerialize(): array
+    {
+        return [
+            'success' => $this->isOk,
+            'name' => $this->name,
+            'description' => $this->description,
+            'error' => $this->errorMessage
+        ];
     }
 }
