@@ -51,17 +51,4 @@ final readonly class RuleResult implements RuleResultInterface
     {
         return $this->errorMessage;
     }
-
-    /**
-     * @return array{success: bool, name: string, description: string|null, error: string|null}
-     */
-    public function jsonSerialize(): array
-    {
-        return [
-            'success' => $this->isOk,
-            'name' => $this->name,
-            'description' => $this->description,
-            'error' => $this->errorMessage
-        ];
-    }
 }

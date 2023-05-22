@@ -14,5 +14,6 @@ class HtmlFormatter implements Formatter
     public function format(array $ruleResults): string
     {
         // TODO: Implement format() method.
+
     }
 }

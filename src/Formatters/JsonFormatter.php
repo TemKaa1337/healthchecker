@@ -3,7 +3,7 @@
 namespace App\Formatters;
 
 use App\Contracts\Formatter;
-use App\Rules\RuleResult;
+use App\Contracts\RuleResult;
 
 final class JsonFormatter implements Formatter
 {
@@ -16,7 +16,12 @@ final class JsonFormatter implements Formatter
         $formatted = [];
         foreach ($ruleResults as $ruleResult) {
             assert($ruleResult instanceof RuleResult, 'Can only format rule which implements RuleResult interface');
-            $formatted[] = $ruleResult->jsonSerialize();
+            $formatted[] = [
+                'success' => $ruleResult->isOk(),
+                'name' => $ruleResult->getName(),
+                'description' => $ruleResult->getDescription(),
+                'error' => $ruleResult->getErrorMessage()
+            ];
         }
         return json_encode($formatted);
     }
