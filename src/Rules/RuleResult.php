@@ -4,7 +4,7 @@ namespace App\Rules;
 
 use App\Contracts\RuleResult as RuleResultInterface;
 
-final readonly class RuleResult implements RuleResultInterface
+readonly class RuleResult implements RuleResultInterface
 {
     /**
      * @param bool $isOk
