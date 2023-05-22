@@ -1,7 +1,5 @@
 <?php declare(strict_types=1);
 
-namespace tests;
-
 use App\Contracts\Rule;
 use App\Contracts\RuleResult;
 use App\HealthChecker;
