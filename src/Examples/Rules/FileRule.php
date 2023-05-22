@@ -1,6 +1,6 @@
 <?php declare(strict_types = 1);
 
-namespace App\Examples;
+namespace App\Examples\Rules;
 
 use App\Contracts\Rule;
 use App\Contracts\RuleResult;
