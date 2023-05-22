@@ -2,5 +2,5 @@
 .gitattributes export-ignore
 README.md export-ignore
 /tests export-ignore
-/src/examples export-ignore
+/src/Examples export-ignore
 psalm.xml export-ignore
