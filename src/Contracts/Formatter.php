@@ -8,5 +8,5 @@ interface Formatter
      * @param list<RuleResult> $ruleResults
      * @return string
      */
-    public function format(array $ruleResults): string;
+    public static function format(array $ruleResults): string;
 }

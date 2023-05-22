@@ -12,7 +12,7 @@ final class XmlFormatter implements Formatter
      * @param list<RuleResult> $ruleResults
      * @return string
      */
-    public function format(array $ruleResults): string
+    public static function format(array $ruleResults): string
     {
         $xml = '<?xml version="1.0"?>';
         $rootLevelSpaceIndent = str_repeat(' ', self::DEFAULT_SPACES_COUNT);
