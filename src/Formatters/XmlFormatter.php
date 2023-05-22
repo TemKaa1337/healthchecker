@@ -7,7 +7,6 @@ use App\Contracts\RuleResult;
 
 final class XmlFormatter implements Formatter
 {
-    private const DEFAULT_SPACES_COUNT = 2;
     /**
      * @param list<RuleResult> $ruleResults
      * @return string
@@ -15,22 +14,24 @@ final class XmlFormatter implements Formatter
     public static function format(array $ruleResults): string
     {
         $xml = '<?xml version="1.0"?>';
-        $rootLevelSpaceIndent = str_repeat(' ', self::DEFAULT_SPACES_COUNT);
-        $outerLevelSpaceIndent = str_repeat(' ', self::DEFAULT_SPACES_COUNT * 2);
-        $innerLevelSpaceIndent = str_repeat(' ', self::DEFAULT_SPACES_COUNT * 3);
-        $xml .= '\n'.$rootLevelSpaceIndent.'<rule-result>';
+        $xml .= '<rule-results>';
         foreach ($ruleResults as $ruleResult) {
             assert($ruleResult instanceof RuleResult, 'Can only format rule which implements RuleResult interface');
-            $xml .= '\n'.$outerLevelSpaceIndent.'<rule>';
+            $xml .= '<rule>';
+            $xml .= "<success>".($ruleResult->isOk() ? 'true' : 'false')."</success>";
+            $xml .= "<name>{$ruleResult->getName()}</name>";
+            $xml .= "<description>{$ruleResult->getDescription()}</description>";
 
-            $xml .= '\n'.$innerLevelSpaceIndent."<is-ok>{$ruleResult->isOk()}</is-ok>";
-            $xml .= '\n'.$innerLevelSpaceIndent."<name>{$ruleResult->getName()}</name>";
-            $xml .= '\n'.$innerLevelSpaceIndent."<description>{$ruleResult->getDescription()}</description>";
-            $xml .= '\n'.$innerLevelSpaceIndent."<error>{$ruleResult->getErrorMessage()}</error>";
+            $error = $ruleResult->getErrorMessage();
+            if ($error === null) {
+                $xml .= '<error null="true"/>';
+            } else {
+                $xml .= "<error>$error</error>";
+            }
 
-            $xml .= '\n'.$outerLevelSpaceIndent.'</rule>';
+            $xml .= '</rule>';
         }
-        $xml .= '\n'.$rootLevelSpaceIndent.'</rule-result>';
+        $xml .= '</rule-results>';
         return $xml;
     }
 }
