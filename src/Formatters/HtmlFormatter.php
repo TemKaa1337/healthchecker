@@ -5,7 +5,7 @@ namespace App\Formatters;
 use App\Contracts\Formatter;
 use App\Contracts\RuleResult;
 
-class HtmlFormatter implements Formatter
+final class HtmlFormatter implements Formatter
 {
     /**
      * @param list<RuleResult> $ruleResults
