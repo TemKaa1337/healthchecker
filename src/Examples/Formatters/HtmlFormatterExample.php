@@ -14,7 +14,7 @@ final class HtmlFormatterExample
         // let's say we have rule results stored in array result, containing array of objects
         // which implements RuleResult interface
         $result = ...;
-        // xml variable will store html formatted result of every rule
+        // html variable will store html formatted result of every rule
         $html = HtmlFormatter::format($result);
     }
 }

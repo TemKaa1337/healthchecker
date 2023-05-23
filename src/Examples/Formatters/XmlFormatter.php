@@ -2,6 +2,8 @@
 
 namespace App\Examples\Formatters;
 
+use App\Formatters\XmlFormatter;
+
 /**
  * This is example of how to use XmlFormatter
  */
