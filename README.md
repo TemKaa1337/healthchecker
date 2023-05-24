@@ -1,7 +1,6 @@
-This project is under development.
-This project will allow you to set rules how to monitor health of your services.
+This project allows you to set rules how to monitor health of your services.
 
-This is simple project which provies interfaces for running tasks.
+This is simple project which provides interfaces for running tasks.
 
 # Quickstart
 For example, you want to check if your service returns 200 HTTP status code.
