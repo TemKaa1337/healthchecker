@@ -1,7 +1,4 @@
 This project allows you to set rules how to monitor health of your services.
-
-This is simple project which provides interfaces for running tasks.
-
 # Quickstart
 For example, you want to check if your service returns 200 HTTP status code.
 Then you need to write two classes for this.  
