@@ -1,10 +1,10 @@
 {
     "name": "temkaa/healthchecker",
-    "type": "library",
+    "type": "package",
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "App\\": "src/"
+            "HealthChecker\\": "src/"
         }
     },
     "authors": [
