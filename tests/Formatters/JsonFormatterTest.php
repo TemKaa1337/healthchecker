@@ -1,8 +1,8 @@
 <?php declare(strict_types = 1);
 
 use PHPUnit\Framework\TestCase;
-use App\Formatters\JsonFormatter;
-use App\Rules\RuleResult;
+use HealthChecker\Formatters\JsonFormatter;
+use HealthChecker\Rules\RuleResult;
 
 final class JsonFormatterTest extends TestCase
 {

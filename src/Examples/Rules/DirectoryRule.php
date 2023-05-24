@@ -1,9 +1,9 @@
 <?php declare(strict_types = 1);
 
-namespace App\Examples\Rules;
+namespace HealthChecker\Examples\Rules;
 
-use App\Contracts\Rule;
-use App\Contracts\RuleResult;
+use HealthChecker\Contracts\Rule;
+use HealthChecker\Contracts\RuleResult;
 
 /**
  * This class checks if given directory exists in OS.

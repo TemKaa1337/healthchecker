@@ -1,9 +1,9 @@
 <?php declare(strict_types = 1);
 
-namespace App\Formatters;
+namespace HealthChecker\Formatters;
 
-use App\Contracts\Formatter;
-use App\Contracts\RuleResult;
+use HealthChecker\Contracts\Formatter;
+use HealthChecker\Contracts\RuleResult;
 
 final class HtmlFormatter implements Formatter
 {

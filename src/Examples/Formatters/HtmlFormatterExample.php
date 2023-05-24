@@ -1,8 +1,8 @@
 <?php declare(strict_types=1);
 
-namespace App\Examples\Formatters;
+namespace HealthChecker\Examples\Formatters;
 
-use App\Formatters\HtmlFormatter;
+use HealthChecker\Formatters\HtmlFormatter;
 
 /**
  * This is example of how to use HtmlFormatter

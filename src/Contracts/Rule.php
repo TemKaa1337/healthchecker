@@ -1,6 +1,8 @@
 <?php declare(strict_types = 1);
 
-namespace App\Contracts;
+namespace HealthChecker\Contracts;
+
+use HealthChecker\Contracts\RuleResult;
 
 interface Rule
 {

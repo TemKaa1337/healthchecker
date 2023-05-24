@@ -1,8 +1,8 @@
 <?php declare(strict_types=1);
 
-namespace App\Examples\Formatters;
+namespace HealthChecker\Examples\Formatters;
 
-use App\Formatters\XmlFormatter;
+use HealthChecker\Formatters\XmlFormatter;
 
 /**
  * This is example of how to use XmlFormatter

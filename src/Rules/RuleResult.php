@@ -1,8 +1,8 @@
 <?php declare(strict_types = 1);
 
-namespace App\Rules;
+namespace HealthChecker\Rules;
 
-use App\Contracts\RuleResult as RuleResultInterface;
+use HealthChecker\Contracts\RuleResult as RuleResultInterface;
 
 readonly class RuleResult implements RuleResultInterface
 {

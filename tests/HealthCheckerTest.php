@@ -1,10 +1,10 @@
 <?php declare(strict_types=1);
 
-use App\Contracts\Rule;
-use App\Contracts\RuleResult;
-use App\HealthChecker;
+use HealthChecker\Contracts\Rule;
+use HealthChecker\Contracts\RuleResult;
+use HealthChecker\HealthChecker;
 use PHPUnit\Framework\TestCase;
-use App\Rules\RuleResult as DefaultRuleResult;
+use HealthChecker\Rules\RuleResult as DefaultRuleResult;
 
 final class HealthCheckerTest extends TestCase
 {

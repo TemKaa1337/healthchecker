@@ -1,10 +1,10 @@
 <?php declare(strict_types = 1);
 
-namespace App;
+namespace HealthChecker;
 
-use App\Rules\RuleResult as ErrorRuleResult;
-use App\Contracts\RuleResult;
-use App\Contracts\Rule;
+use HealthChecker\Rules\RuleResult as ErrorRuleResult;
+use HealthChecker\Contracts\RuleResult;
+use HealthChecker\Contracts\Rule;
 
 final readonly class HealthChecker
 {

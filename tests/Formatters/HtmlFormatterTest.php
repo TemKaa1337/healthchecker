@@ -1,8 +1,8 @@
 <?php declare(strict_types=1);
 
-use App\Rules\RuleResult;
+use HealthChecker\Rules\RuleResult;
 use PHPUnit\Framework\TestCase;
-use App\Formatters\HtmlFormatter;
+use HealthChecker\Formatters\HtmlFormatter;
 
 final class HtmlFormatterTest extends TestCase
 {
