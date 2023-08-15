@@ -23,7 +23,10 @@ final readonly class HealthChecker
     {
         $result = [];
         foreach ($this->rules as $rule) {
-            assert($rule instanceof Rule, 'Each runnable rule must implement Rule interface');
+            if (!$rule instanceof Rule) {
+                throw new \RuntimeException('Each runnable rule must implement Rule interface');
+            }
+            
             try {
                 $ruleResult = $rule->run();
             } catch (\Exception $e) {
